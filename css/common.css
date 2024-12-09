@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --font-size-pc:20px;
+    --font-size-tab:18px;
+    --font-size-mobile:14px;
+    --heading-font:'yg-jalnan';
+
+    --font-bold:600;
+    --font-medium:400;
+    --font-thin:300;
+    --main-color:#41C8C9;
+    --inact-color:#C4EEEE;
+    --hover-color:#277879;
+
+    --space-xx-small:0.25rem;
+    --space-x-small:0.5rem;
+    --space-small:1rem;
+    --space-middle:2rem;
+    --space-large:3rem;
+    --space-x-large:6rem;
+    --space-xx-large:9rem;
+
+
+}
+
+html{
+    font-size: var(--font-size-pc);
+    font-family:Pretendard,"Noto Sans KR",sans-serif;
+    line-height: 1.4;
+}
+h2{
+    font-family: 'yg-jalnan';
+    line-height: 1.1;
+    font-size:3rem;
+}
