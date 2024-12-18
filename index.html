@@ -29,6 +29,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
     <script src="./js/header.js"></script>
+
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="gnb_modal"></div>
@@ -126,7 +130,278 @@
             <p>고객상담실 <a href="tel:10000000">1000-0000</a></p>
         </section>
     </div>
+    <div class="btn_top">
+        <img src="./img/btn_top.svg" alt="위로가기버튼">
+    </div>
+    
+    <main>
+        <div class="station1 swiper">
+            <ul class="train swiper-wrapper">
+                <li data-slide-index="0" class="swiper-slide"><img src="./img/slide1.jpg" alt="반려동물에게도 배움이 필요합니다."></li>
+                <li data-slide-index="1" class="swiper-slide"><video src="./video/visual.mp4" loop autoplay muted></video></li>
+                <li data-slide-index="2" class="swiper-slide"><img src="./img/slide3.jpg" alt="믿음과 애정으로 채워진 훈련"></li>
+            </ul>
+            <div class="swiper-pagination"></div>
+            <div class="station1_txt">
+                <h3>함께라서 더 아름다운 오늘</h3>
+                <p>우리의 사랑스러운 반려동물에게도 배움이란 선물이 필요합니다. 믿음과 애정으로 채워진 훈련, 그 특별한 여정을 함께합니다.</p>
+            </div>
+        </div>
+        <script>
+            let station1_txt = document.querySelector(".station1_txt")
+            let txt_array = [
+                `<h3>함께라서 더 아름다운 오늘</h3>
+                <p>우리의 사랑스러운 반려동물에게도 배움이란 선물이 필요합니다. 믿음과 애정으로 채워진 훈련, 그 특별한 여정을 함께합니다.</p>`,
+                `<h3>댕냥스쿨과 함께라면 가능합니다</h3>
+                <p>반려동물의 행동 개선부터 보호자와의 교감까지, 댕냥스쿨이 전문적인 솔루션을 제공합니다. 지금 바로 시작해보세요!</p>`,
+                `<h3>반려동물의 더 나은 내일을 위해</h3>
+                <p>댕냥스쿨은 맞춤형 훈련으로 반려동물의 성장과 행복을 책임집니다. 지금 문의하고 특별한 여정을 시작하세요.</p>`
+            ]
 
-    <main></main>
+            const swiper1 = new Swiper('.station1', {
+                // Optional parameters
+                direction: 'vertical',
+                loop: true,
+                // effect:'fade',
+
+                // If we need pagination
+                pagination: {
+                    clickable:true,
+                    el: '.swiper-pagination',
+                },
+                // autoplay: {
+                //     delay: 3000,
+                // },
+                speed:900,
+            });
+
+            swiper1.on('slideChange', function () {
+                station1_txt.innerHTML = txt_array[this.realIndex]
+            });
+        </script>
+
+        <!-- tp1은 텍스트가 좌 / 이미지 우 -->
+        <div class="common_frame tp1">
+            <canvas id="bouncingBalls"></canvas>
+            <section class="tp1_txt">
+                <h2>
+                    <b>작은 변화</b>가 쌓여<br>
+                    <b>큰 행복</b>을 만들어 갑니다.
+                </h2>
+                <h4>
+                    훈련은 반려동물과의 더 나은 삶을 위한 첫걸음입니다. 세심한 관찰과 따뜻한 마음으로, <b>사랑스러운 친구와의 행복한 동행을 돕겠습니다.</b>
+                </h4>
+                <p>
+                    반려동물과의 교감은 단순한 훈련을 넘어, 서로의 마음을 여는 소중한 과정입니다. 당신과 반려동물의 일상이 더 빛날 수 있도록 도와드리겠습니다.
+                </p>
+                <a href="#" class="btn_style">서비스 소개 바로가기</a>
+            </section>
+            <section class="tp1_img">
+                <figure class="tp1_1">
+                    <img src="./img/con1.jpg" alt="반려동물 훈련 이미지1">
+                </figure>
+                <figure class="tp1_2">
+                    <img src="./img/con2.jpg" alt="반려동물 훈련 이미지2">
+                </figure>
+            </section>
+        </div>
+
+        <!-- tp2는 텍스트가 위 / 이미지 아래 3개 나란히 -->
+        <div class="common_frame tp2">
+            <h2><b>함께 나누는</b> 반려 생활 이야기</h2>
+            <h4>
+                반려동물을 사랑하는 이들이 함께 이야기를 나누고, 서로의 경험과 지혜를 공유하는 공간입니다.<br>
+                당신의 소중한 순간들을 우리와 함께하세요.
+            </h4>
+            <p><b>작은 공감 하나가 큰 울림이 되어 돌아옵니다.</b></p>
+            <ul class="tp2list">
+                <li>
+                    <figure>
+                        <img src="./img/con3.jpg" alt="반려생활이야기1">
+                    </figure>
+                    <div class="tp2txt">
+                        <div class="tp2txt_1">
+                            <p>우리 집 강아지 첫 산책 도전기 🐾</p>
+                            <span>2024-11-16</span>
+                        </div>
+                        <div class="tp2txt_2">
+                            LovePuppy22
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./img/con4.jpg" alt="반려생활이야기2">
+                    </figure>
+                    <div class="tp2txt">
+                        <div class="tp2txt_1">
+                            <p>고양이와 하루 종일 놀아본 후기 😻 양이와 하루 종일 놀아본 후기 😻 양이와 하루 종일 놀아본 후기 😻</p>
+                            <span>2024-11-17</span>
+                        </div>
+                        <div class="tp2txt_2">
+                            CatMommy99
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./img/con5.jpg" alt="반려생활이야기3">
+                    </figure>
+                    <div class="tp2txt">
+                        <div class="tp2txt_1">
+                            <p>분리불안을 극복한 우리 아이의 변화</p>
+                            <span>2024-11-18</span>
+                        </div>
+                        <div class="tp2txt_2">
+                            HappyTail89
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- tp3은 swiper js 슬라이더 2개 연동 -->
+        <div class="common_frame tp3">
+            <section class="station2 swiper">
+                <ul class="train swiper-wrapper">
+                    <li class="swiper-slide"><img src="./img/con3.jpg" alt="반려생활이야기1"></li>
+                    <li class="swiper-slide"><img src="./img/con4.jpg" alt="반려생활이야기2"></li>
+                    <li class="swiper-slide"><img src="./img/con5.jpg" alt="반려생활이야기3"></li>
+                </ul>
+            </section>
+            <section class="station3 swiper">
+                <ul class="train swiper-wrapper">
+                    <li class="swiper-slide">
+                        <h3>우리 집 강아지 첫 산책 도전기 🐾</h3>
+                        <div class="st3_train_info">
+                            <p>LovePuppy22</p>
+                            <p>2024-11-16</p>
+                        </div>
+                        <div class="st3_train_desc">
+                            우리 집 강아지 "복돌이"는 산책을 한 번도 해본 적이 없어서 처음 리드줄을 매는 순간부터 긴장하는 모습이 역력했어요. 우선 집 안에서 리드줄에 적응시키고, 간식을 주며 리드줄이 안전하다는 걸 느끼게 해줬죠. 문밖으로 첫발을 내딜 때는 잔뜩 주저했지만, 몇 걸음만 나가니 금세 주변 냄새를 맡으며 호기심 가득한 표정을 지었답니다. 처음 산책 코스는 동네 작은 공원으로 정했어요. 복돌이는 지나가는 사람들과 강아지들을 보며 긴장도 했지만, 점점 편안해하는 모습이 보였어요. 예상보다 짧은 시간에 지쳐서 집에 돌아오자마자 깊게 잠들었답니다. 처음이니만큼 천천히 적응시켜야겠다고 다짐했어요. 다음 산책은 조금 더 긴 코스를 시도해볼 예정이에요!
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <h3>고양이와 하루 종일 놀아본 후기 😻</h3>
+                        <div class="st3_train_info">
+                            <p>CatMommy99</p>
+                            <p>2024-11-17</p>
+                        </div>
+                        <div class="st3_train_desc">
+                            우리 고양이 "나비"와 하루를 온전히 함께 보내기로 마음먹고 다양한 놀이를 준비했어요. 아침에는 펠트 공과 레이저 포인터로 몸을 움직이게 했고, 점심 이후엔 캣타워에서 사냥 놀이를 이어갔죠. 나비는 특히 낚싯대 장난감을 좋아해서 쉴 새 없이 뛰어다니는 모습을 보였어요. 평소엔 혼자 있는 시간이 많았는데, 이렇게 오래 함께 놀아주는 게 얼마나 중요한지 느끼게 되더라고요. 놀이 중간에는 간식도 주며 휴식 시간을 가졌고, 오후엔 창가에 앉아 햇볕을 즐기며 꾹꾹이를 하는 모습에 절로 미소가 지어졌답니다. 저녁에는 나비가 지쳤는지 제 무릎 위에서 잠들었어요. 앞으로는 더 자주 이렇게 놀아주려고요!
+                        </div>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <h3>분리불안을 극복한 우리 아이의 변화</h3>
+                        <div class="st3_train_info">
+                            <p>HappyTail89</p>
+                            <p>2024-11-18</p>
+                        </div>
+                        <div class="st3_train_desc">
+                            처음 우리 강아지 "콩이"는 제가 잠시 집을 비우기만 해도 짖거나 낑낑대며 불안해하곤 했어요. 문제 해결을 위해 긍정 강화 훈련을 시작했죠. 먼저 제가 나갈 때와 돌아올 때의 행동을 일관성 있게 유지하며, 짧은 시간부터 집을 비우는 연습을 했어요. 집에 남아있는 동안 콩이가 좋아하는 장난감과 간식을 제공해 긍정적인 경험을 쌓게 했고요. 2주 정도가 지나자 짖는 횟수가 확연히 줄어들었고, 제가 나갈 때도 더 이상 문 앞에서 기다리지 않더라고요. 지금은 제 귀가 시간까지 혼자 잘 지내며 평온하게 낮잠을 자는 모습을 보이니 마음이 한결 편안해졌어요. 꾸준한 노력이 콩이에게도 큰 변화를 만들어줬네요!
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <script>
+            let station2 = new Swiper(".station2",{
+                direction:'vertical',
+                autoplay:{
+                    delay:5000
+                },
+                loop:true,
+                speed:1000,
+            })
+            let station3 = new Swiper(".station3",{
+                loop:true,
+                speed:1000
+            })
+
+            station2.on("slideChange",function(){
+                // station2가 슬라이드가 변할 때 실행되는 동작
+                station3.slideToLoop(station2.realIndex)
+                // station3는 station2의 활성화된 슬라이드 순번에 맞추어 이동한다.
+            })
+        </script>
+
+        <div class="common_frame tp4">
+            <section class="tp4_img">
+                <img src="./img/con7.jpg" alt="맞춤형 훈련과정 이미지">
+            </section>
+            <section class="tp4_txt">
+                <h2>
+                    우리 아이 <b>맞춤형</b><br>
+                    훈련 과정
+                </h2>
+                <h4>훈련은 단순한 기술이 아니라, <b>반려동물과의 신뢰를 쌓아가는 여정입니다.</b> 서로를 이해하고 교감하며 특별한 유대를 만들어 갑니다.</h4>
+                <p>
+                    훈련은 동물의 스트레스를 최소화하며, 긍정 강화 방식으로 진행됩니다.
+                    모든 과정은 트레이너의 직접 감독하에 이루어지며, 훈련 환경의 안전성을 지속적으로 점검합니다.
+                </p>
+                <a href="#" class="btn_style">훈련과정에 대해서 알아보기</a>
+            </section>
+        </div>
+
+        <div class="common_frame tp5">
+            <h2>훈련 전 <b>꼭</b> 알아야 할 정보들</h2>
+            <h4>
+                훈련에 대해 잘 모르시겠나요? <b>FAQ에서 모든 궁금증을 해결하세요.</b><br>
+                필요한 추가 질문은 언제든 문의하세요!
+            </h4>
+            <form action="#" class="faq_form">
+                <label for="search">검색하기</label>
+                <input type="text" id="search" placeholder="키워드로 질문을 찾아보세요 (예: 강아지 분리불안, 훈련 기간)">
+                <button type="submit" class="btn_search">
+                    <img src="./img/btn_search.svg" alt="돋보기모양 검색버튼">
+                </button>
+            </form>
+            <p>
+                훈련에 대해 공통적으로 궁금해하는 질문과 트레이너의 답변을 모았습니다. 쉽고 빠르게 확인해보세요!
+            </p>
+            <a href="#" class="btn_style">FAQ 자주 묻는 질문</a>
+        </div>
+    </main>
+    <footer>
+        <div class="ftop">
+            <div class="finfo">
+                <ul class="fnb">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#"><b>개인정보처리방침</b></a></li>
+                    <li><a href="#">문의하기</a></li>
+                    <li><a href="#">자주묻는질문(FAQ)</a></li>
+                </ul>
+                <dl class="coinfo">
+                    <dt>회사명:</dt>
+                    <dd>댕냥스쿨</dd>
+                    <dt>주소:</dt>
+                    <dd>서울특별시 강남구 댕냥로 101, 2층</dd>
+                    <dt>사업자 등록번호:</dt>
+                    <dd>123-45-67890</dd>
+                    <dt>대표 전화:</dt>
+                    <dd>02-1234-5678</dd>
+                    <dt>이메일</dt>
+                    <dd>contact@dangnyangschool.com</dd>
+                </dl>
+            </div>
+            <div class="fsns">
+                <p>댕냥스쿨의 더 많은 이야기를 만나보세요</p>
+                <ul class="sns">
+                    <li><a href="#"><img src="./img/icon_insta.svg" alt="인스타그램"></a></li>
+                    <li><a href="#"><img src="./img/icon_meta.svg" alt="메타"></a></li>
+                    <li><a href="#"><img src="./img/icon_utube.svg" alt="유튜브"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fbottom">
+            <h1>
+                <a href="#"><img src="./img/foot_logo.svg" alt="댕냥스쿨 하단로고"></a>
+            </h1>
+            <div class="copy">본 홈페이지는 취업용도의 포트폴리오 홈페이지 입니다.</div>
+        </div>
+    </footer>
+    <script src="./js/canvas.js"></script>
 </body>
 </html>

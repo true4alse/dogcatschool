@@ -4,7 +4,7 @@
     position: fixed;
     left:calc(50% - 3.5rem);
     top:-7rem;
-    background-color: var(--inact-color);
+    background-color: #fff;
     transition: all 1s ease 0s;
     border-radius: 50%;
     z-index: 50001;
@@ -89,7 +89,7 @@
     height:100%;
 }
 .gnb>li{
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
     overflow: hidden;
 }
 .gnb>li>a{
@@ -138,4 +138,309 @@
 
 main{
     min-height: 200vh;
+    padding-top: var(--space-large);
 }
+div.station1{
+    height:885px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border-radius: var(--border-radius);
+    position: relative;
+}
+.station1 img,
+.station1 video{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+.station1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(40deg, rgb(0 0 0 / 42%), transparent);
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: 0 0 40px rgb(0 0 0 / 57%) inset;
+    border-radius: var(--border-radius);
+}
+.station1_txt{
+    position: absolute;
+    left:var(--space-large);
+    top:50%;
+    transform: translateY(-50%);
+    width:40%;
+    z-index: 2;
+    color:#fff;
+}
+.station1_txt h3{
+    margin-bottom: var(--space-small);
+}
+div.station1 .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--main-color);
+}
+.station1 .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+    background: var(--main-color, #000);
+    opacity: 0.4;
+    transition:all 0.5s ease 0s;
+}
+.common_frame.tp1{
+    display: flex;
+    gap:var(--space-large);
+    /* flex-direction: row-reverse; */
+    position: relative;
+}
+.common_frame.tp1 canvas{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    /* height:100%; */
+    z-index: -1;
+}
+.tp1_txt{
+    flex:700;
+}
+.tp1_txt>*{
+    margin-bottom: var(--space-small);
+}
+.tp1_txt p{
+    margin-bottom: var(--space-large);
+}
+.tp1_img{
+    flex:952;
+    display: flex;
+    align-items: flex-start;
+    gap:var(--space-small);
+    flex-direction: row-reverse;
+}
+.tp1_1{flex:2;}
+.tp1_2{
+    flex:1;
+    margin-top: 15rem;
+}
+.tp1_img img{
+    border-radius: var(--border-radius);
+}
+.tp2{
+    text-align: center;
+}
+.tp2>*{
+    margin-bottom: var(--space-small);
+}
+.tp2>*:last-child{
+    margin-bottom: 0;
+}
+.tp2 h4{
+    margin-bottom: var(--space-middle);
+}
+.tp2>p{
+    margin-bottom: var(--space-x-large);
+}
+.tp2list{
+    display: flex;
+    gap:1rem;
+    text-align: left;
+}
+.tp2list>li{
+    flex:1;
+    &>figure{
+        aspect-ratio: 1/1;
+        line-height: 0;
+        margin-bottom: var(--space-small);
+        & img{
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+        }
+    }
+}
+.tp2txt_1 p{
+    display: -webkit-box;          /* Flexbox 기반으로 요소를 보여줌 */
+    -webkit-box-orient: vertical; /* 박스의 방향을 세로로 설정 */
+    overflow: hidden;             /* 넘치는 내용은 숨김 */
+    -webkit-line-clamp: 2;        /* 표시할 줄 수를 2줄로 제한 */
+    font-weight: var(--font-semibold);
+}
+
+.tp3{
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-large);
+}
+.station2{
+    height:650px;
+    flex:650;
+    border-radius: var(--border-radius);
+    & img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+}
+.station3{
+    flex:644;
+    & li > *{
+        margin-bottom: var(--space-small);
+    }
+    & li >*:last-child{
+        margin-bottom: 0;
+    }
+    
+}
+.st3_train_info{
+    display: flex;
+    gap: var(--space-middle);
+}
+
+.st3_train_desc{
+    display: -webkit-box;          
+    -webkit-box-orient: vertical; 
+    overflow: hidden;             
+    -webkit-line-clamp: 10;        
+}
+.station3 h3{
+    display: -webkit-box;          
+    -webkit-box-orient: vertical; 
+    overflow: hidden;             
+    -webkit-line-clamp: 2;    
+}
+.tp4{
+    display: flex;
+    gap:var(--space-large);
+    justify-content: space-between;
+}
+.tp4_img{
+    margin-left: 9rem;
+    flex:722;
+    height: 700px;;
+    & img{
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+        border-radius: var(--border-radius);
+    }
+}
+.tp4_txt{
+    flex:688;
+    padding-top: 7rem;
+}
+.tp4_txt>*{
+    margin-bottom: var(--space-middle);
+}
+.tp4_txt>*:last-child{
+    margin-bottom: 0;
+}
+
+.tp5{
+    text-align: center;
+}
+.tp5>*{
+    margin-bottom: var(--space-small);
+}
+.tp5>*:last-child{
+    margin-bottom: 0;
+}
+.faq_form{
+    margin: var(--space-large);
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-small);
+}
+.faq_form label{
+    display: none;
+}
+#search{
+    background-color: #f8f8f8;
+    border:3px solid var(--main-color);
+    width:588px;
+    height:4rem;
+    border-radius: 130px;
+    padding-left: 2.5rem;
+    box-sizing: border-box;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+#search::placeholder{
+    color:var(--main-color);
+    
+}
+.btn_search{
+    height:4rem;
+    background-color: initial;
+    border: none;
+    cursor: pointer;
+    flex-shrink:0 ;
+}
+footer{
+    background-color: var(--dark-color);
+    color:#fff;
+    padding:var(--space-middle) 4rem var(--space-x-large);
+}
+.ftop{
+    margin-bottom: var(--space-middle);
+    display: flex;
+    justify-content: space-between;
+}
+.finfo{
+    width:60%;
+}
+.fsns{
+}
+.fnb{
+    display: flex;
+    gap: var(--space-small);
+}
+.coinfo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--space-small);
+}
+.coinfo dd{
+    margin-right: var(--space-small);
+}
+.sns{
+    display: flex;
+    gap: var(--space-x-small);
+    margin-top: var(--space-small);
+}
+
+.fbottom{
+    text-align: center;
+}
+.copy{
+    margin-top: var(--space-small);
+}
+.btn_top{
+    position: fixed;
+    z-index: 40000;
+    left:calc(50% - 1.2rem);
+    width:2.4rem;
+    height:2.4rem;
+    bottom:-120px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(5, 5, 5, 0.222);
+    cursor: pointer;
+    /* transform:scale(0); */
+    transition: all 0.7s ease 0s;
+}
+.btn_top.on{
+    /* transform: scale(1); */
+    bottom:30px;
+}
+

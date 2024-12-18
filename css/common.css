@@ -11,12 +11,15 @@
     --font-size-mobile:14px;
     --heading-font:'yg-jalnan';
 
-    --font-bold:600;
+    --font-black:900;
+    --font-bold:700;
+    --font-semibold:600;
     --font-medium:400;
     --font-thin:300;
     --main-color:#41C8C9;
     --inact-color:#C4EEEE;
     --hover-color:#277879;
+    --dark-color:#212121;
 
     --space-xx-small:0.25rem;
     --space-x-small:0.5rem;
@@ -26,9 +29,11 @@
     --space-x-large:6rem;
     --space-xx-large:9rem;
 
-
+    --border-radius:1.5rem;
 }
-
+b{
+    color:var(--main-color);
+}
 html{
     font-size: var(--font-size-pc);
     font-family:Pretendard,"Noto Sans KR",sans-serif;
@@ -38,4 +43,48 @@ h2{
     font-family: 'yg-jalnan';
     line-height: 1.1;
     font-size:3rem;
+}
+h3{
+    line-height: 1.1;
+    font-size:2.5rem;
+    font-weight: var(--font-black);
+}
+h4{
+    font-size: 1.6rem;
+    font-weight: var(--font-semibold);
+    line-height: 1.2;
+}
+
+
+/* ////////////////////////////////////////버튼 공통스타일//////////////////////////////////// */
+
+.btn_style{
+    font-size:0.9rem;
+    padding:.5rem 2rem;
+    background-color: var(--main-color);
+    display: inline-block;
+    border-radius: 50px;
+    border:0.2rem solid transparent;
+}
+.btn_style:hover{
+    background-color: var(--hover-color);
+    color:#fff;
+}
+.btn_style:active{
+    border:0.2rem solid var(--inact-color);
+}
+
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+
+main>*{
+    margin-bottom: var(--space-x-large);
+}
+main>*:last-child{
+    /* margin-bottom: 0; */
+}
+.common_frame{
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
